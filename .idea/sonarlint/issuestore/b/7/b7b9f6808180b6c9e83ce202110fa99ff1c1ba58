@@ -1,0 +1,14 @@
+
+n
+java:S2293H"YReplace the type specification in this constructor call with the diamond operator ("<>").( ‚œw
+t
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(ÕÏÊÿùÿÿÿÿ
+†
+java:S1319G"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ïÞÞÙ
+‹
+java:S1319Z"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¶ªäÝþÿÿÿÿ
+E
+java:S1948"*Make "listener" transient or serializable.(»ñ…øþÿÿÿÿ
+R	java:S125’"<This block of commented-out lines of code should be removed.(‰êá‡
+n
+java:S3776™"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(î°áãûÿÿÿÿ
