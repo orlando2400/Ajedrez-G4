@@ -27,7 +27,5 @@ c
 3src/com/example/chessgame/modelo/pieces/Knight.java,8\4\84a66b9cce00cbd0038fa801455db34fba5d12bf
 ^
 .src/com/example/chessgame/ChessImages/foo.text,2\c\2c56fab4d31b6b6fa9101736396e9b8f4a758e58
-g
-7src/com/example/chessgame/controlador/ChessGameLog.java,6\4\640c07d88234c2f5f910473da2f5726e7c66f233
 i
 9src/com/example/chessgame/modelo/game/ChessGraveyard.java,b\0\b036522c5ab445aa8e6378e8410d59b86675d7b8
