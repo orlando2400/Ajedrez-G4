@@ -31,7 +31,7 @@ public class ChessPanel extends JPanel{
         this.setPreferredSize(new Dimension(800, 600));
         gameEngine = new ChessGameEngine(gameBoard); // start the game
     }
-
+//Prueba de comentario
     public static ChessPanel getInstance() {
         if (instance == null) {
             instance = new ChessPanel();
