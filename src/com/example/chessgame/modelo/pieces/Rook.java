@@ -5,8 +5,6 @@ import com.example.chessgame.modelo.game.ChessGamePiece;
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
 public class Rook extends ChessGamePiece {
-    // private ArrayList<String> possibleMoves;
-    // ----------------------------------------------------------
     /**
      * Create a new Rook object.
      *

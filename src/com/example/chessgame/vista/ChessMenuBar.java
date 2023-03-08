@@ -32,17 +32,9 @@ public class ChessMenuBar extends JMenuBar{
      * @author Danielle Bushrow (dbushrow)
      * @version 2010.11.17
      */
-    private class MenuListener
-            implements ActionListener
-    {
-        /**
-         * Takes an appropriate action based on which menu button is clicked
-         *
-         * @param event
-         *            the mouse event from the source
-         */
-        @Override
-        public void actionPerformed( ActionEvent event ){
+    private class MenuListener implements ActionListener { @Override
+
+    public void actionPerformed( ActionEvent event ){
             String buttonName = ( (JMenuItem)event.getSource() ).getText();
             if ( buttonName.equals( "About" ) ){
                 aboutHandler();

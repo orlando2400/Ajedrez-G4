@@ -116,7 +116,6 @@ public class ChessGameEngine{
             return false;
         }
         else
-        // white player
         {
             if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
                 return true;
@@ -164,7 +163,6 @@ public class ChessGameEngine{
         else
         {
             board.resetBoard( false );
-            // System.exit(0);
         }
     }
     /**
