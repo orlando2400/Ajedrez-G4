@@ -14,9 +14,8 @@ public class ChessPanel extends JPanel{
     private ChessGameLog gameLog;
     private ChessGraveyard playerOneGraveyard;
     private ChessGraveyard playerTwoGraveyard;
-    private ChessGameEngine gameEngine;
-
-    private ChessPanel() {
+    private transient ChessGameEngine gameEngine;//transient
+    ChessPanel() {
         this.setLayout(new BorderLayout());
         menuBar = new ChessMenuBar();
         gameBoard = new ChessGameBoard();

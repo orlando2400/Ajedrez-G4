@@ -10,12 +10,17 @@ public class ChessGameLog
     /**
      * Create a new ChessGameLog object.
      */
-    public ChessGameLog(){
+    public ChessGameLog() {
         super(
-                new JTextArea( "", 5, 30 ),
-                JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
-                JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS );
-        textArea = ( (JTextArea)this.getViewport().getView() );
+                new JTextArea("", 5, 30),
+                VERTICAL_SCROLLBAR_ALWAYS,
+                HORIZONTAL_SCROLLBAR_ALWAYS
+        );
+        textArea = (JTextArea) this.getViewport().getView();
+        JScrollBar verticalScrollBar = this.createVerticalScrollBar();
+        JScrollBar horizontalScrollBar = this.createHorizontalScrollBar();
+        this.setVerticalScrollBar(verticalScrollBar);
+        this.setHorizontalScrollBar(horizontalScrollBar);
     }
     // ----------------------------------------------------------
     /**

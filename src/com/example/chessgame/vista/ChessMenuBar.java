@@ -83,16 +83,18 @@ public class ChessMenuBar extends JMenuBar{
      * Uses Tony Allevato's code for exiting a GUI app without System.exit()
      * calls.
      */
-    private void exitHandler(){
+    private void exitHandler(){ //The error message indicates that a null reference is being accessed, which can result in a NullPointerException being thrown.
         JOptionPane.showMessageDialog( this.getParent(), "Thanks for leaving"
                 + ", quitter! >:(" );
         Component possibleFrame = this;
         while ( possibleFrame != null && !( possibleFrame instanceof JFrame ) ){
             possibleFrame = possibleFrame.getParent();
         }
-        JFrame frame = (JFrame)possibleFrame;
-        frame.setVisible( false );
-        frame.dispose();
+        if (possibleFrame != null) {
+            JFrame frame = (JFrame)possibleFrame;
+            frame.setVisible( false );
+            frame.dispose();
+        }
     }
     /**
      * Takes an appropriate action if the toggle graveyard button is clicked.
