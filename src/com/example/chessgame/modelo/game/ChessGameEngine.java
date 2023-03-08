@@ -1,13 +1,14 @@
 package com.example.chessgame.modelo.game;
+
 import com.example.chessgame.modelo.board.BoardSquare;
 import com.example.chessgame.modelo.board.ChessGameBoard;
 import com.example.chessgame.modelo.pieces.King;
 import com.example.chessgame.vista.ChessPanel;
 
-import java.util.ArrayList;
-import java.awt.Color;
-import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class ChessGameEngine{
     private ChessGamePiece currentPiece;
@@ -82,10 +83,10 @@ public class ChessGameEngine{
     public boolean playerHasLegalMoves( int playerNum ){
         ArrayList<ChessGamePiece> pieces;
         if ( playerNum == 1 ){
-            pieces = board.getAllWhitePieces();
+            pieces = (ArrayList<ChessGamePiece>) board.getAllWhitePieces();
         }
         else if ( playerNum == 2 ){
-            pieces = board.getAllBlackPieces();
+            pieces = (ArrayList<ChessGamePiece>) board.getAllBlackPieces();
         }
         else
         {
@@ -110,18 +111,12 @@ public class ChessGameEngine{
         }
         if ( currentPlayer == 2 ) // black player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.BLACK ){
-                return true;
-            }
-            return false;
+            return currentPiece.getColorOfPiece() == ChessGamePiece.BLACK;
         }
         else
         // white player
         {
-            if ( currentPiece.getColorOfPiece() == ChessGamePiece.WHITE ){
-                return true;
-            }
-            return false;
+            return currentPiece.getColorOfPiece() == ChessGamePiece.WHITE;
         }
     }
     /**
@@ -164,7 +159,6 @@ public class ChessGameEngine{
         else
         {
             board.resetBoard( false );
-            // System.exit(0);
         }
     }
     /**

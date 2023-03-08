@@ -1,10 +1,12 @@
 package com.example.chessgame.modelo.game;
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.ImageIcon;
+
 import com.example.chessgame.modelo.board.ChessGameBoard;
 import com.example.chessgame.vista.ChessPanel;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class ChessGamePiece{
     private boolean             skipMoveGeneration;

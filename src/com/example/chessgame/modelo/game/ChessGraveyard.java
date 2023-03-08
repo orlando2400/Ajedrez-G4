@@ -1,6 +1,7 @@
 package com.example.chessgame.modelo.game;
-import java.awt.GridLayout;
+
 import javax.swing.*;
+import java.awt.*;
 
 public class ChessGraveyard extends JPanel{
     private String title;
@@ -38,4 +39,3 @@ public class ChessGraveyard extends JPanel{
         this.add( new JLabel( title ) );
     }
 }
-

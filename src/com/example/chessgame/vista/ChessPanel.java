@@ -1,11 +1,12 @@
 package com.example.chessgame.vista;
+
 import com.example.chessgame.controlador.ChessGameLog;
 import com.example.chessgame.modelo.board.ChessGameBoard;
 import com.example.chessgame.modelo.game.ChessGameEngine;
 import com.example.chessgame.modelo.game.ChessGraveyard;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
 public class ChessPanel extends JPanel{
     private ChessMenuBar    menuBar;
@@ -13,7 +14,7 @@ public class ChessPanel extends JPanel{
     private ChessGameLog gameLog;
     private ChessGraveyard playerOneGraveyard;
     private ChessGraveyard  playerTwoGraveyard;
-    private ChessGameEngine gameEngine;
+    private transient ChessGameEngine gameEngine;
     // ----------------------------------------------------------
     /**
      * Create a new ChessPanel object.
@@ -23,7 +24,8 @@ public class ChessPanel extends JPanel{
         menuBar = new ChessMenuBar();
         gameBoard = new ChessGameBoard();
         gameLog = new ChessGameLog();
-        playerOneGraveyard = new ChessGraveyard( "Player 1's graveyard" );
+        playerOneGraveyard = new ChessGraveyard("Player 1's graveyard") {
+        };
         playerTwoGraveyard = new ChessGraveyard( "Player 2's graveyard" );
         this.add( menuBar, BorderLayout.NORTH );
         this.add( gameBoard, BorderLayout.CENTER );

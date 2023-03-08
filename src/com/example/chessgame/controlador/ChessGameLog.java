@@ -3,8 +3,8 @@ package com.example.chessgame.controlador;
 import javax.swing.*;
 import java.util.Date;
 
-public class ChessGameLog
-        extends JScrollPane{
+public class ChessGameLog extends JScrollPane{
+    //Instanciamiento de textArea
     private JTextArea textArea;
     // ----------------------------------------------------------
     /**
@@ -54,5 +54,4 @@ public class ChessGameLog
         return textArea.getText().substring( indexOfLastNewLine + 1 );
     }
 }
-
 

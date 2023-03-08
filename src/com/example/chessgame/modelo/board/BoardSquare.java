@@ -1,11 +1,12 @@
 package com.example.chessgame.modelo.board;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+
 import com.example.chessgame.modelo.game.ChessGamePiece;
+
+import javax.swing.*;
 public class BoardSquare extends JPanel{
     private int            row;
     private int            col;
-    private ChessGamePiece piece;
+    private transient ChessGamePiece piece;
     private JLabel         imageLabel;
     // ----------------------------------------------------------
     /**

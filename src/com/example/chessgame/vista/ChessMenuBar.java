@@ -1,7 +1,9 @@
 package com.example.chessgame.vista;
-import java.awt.Component;
-import java.awt.event.*;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ChessMenuBar extends JMenuBar{
     // ----------------------------------------------------------
@@ -32,8 +34,10 @@ public class ChessMenuBar extends JMenuBar{
      * @author Danielle Bushrow (dbushrow)
      * @version 2010.11.17
      */
-    private class MenuListener
-            implements ActionListener
+
+    /*Se implementa el patrón Observer mediante mediante la escucha
+    de los eventos de click que crea JMenuItem*/
+    private class MenuListener implements ActionListener
     {
         /**
          * Takes an appropriate action based on which menu button is clicked
@@ -91,6 +95,7 @@ public class ChessMenuBar extends JMenuBar{
             possibleFrame = possibleFrame.getParent();
         }
         JFrame frame = (JFrame)possibleFrame;
+        assert frame != null;
         frame.setVisible( false );
         frame.dispose();
     }
