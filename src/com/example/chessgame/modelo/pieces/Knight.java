@@ -1,10 +1,16 @@
-package com.example.chessgame.modelo.pieces;
-import com.example.chessgame.modelo.board.ChessGameBoard;
-import com.example.chessgame.modelo.game.ChessGamePiece;
-
 import javax.swing.ImageIcon;
 import java.util.ArrayList;
-public class Knight extends ChessGamePiece {
+// -------------------------------------------------------------------------
+/**
+ * Represents a Knight game piece.
+ *
+ * @author Ben Katz (bakatz)
+ * @author Myles David II (davidmm2)
+ * @author Danielle Bushrow (dbushrow)
+ * @version 2010.11.17
+ */
+public class Knight
+    extends ChessGamePiece{
     /**
      * Knight constructor for gamePiece
      *
@@ -17,7 +23,7 @@ public class Knight extends ChessGamePiece {
      * @param color
      *            either GamePiece.WHITE, BLACK, or UNASSIGNED
      */
-    public Knight(ChessGameBoard board, int row, int col, int color ){
+    public Knight( ChessGameBoard board, int row, int col, int color ){
         super( board, row, col, color );
     }
     /**
@@ -29,15 +35,15 @@ public class Knight extends ChessGamePiece {
      * @return ArrayList<String> a list of the possible moves
      */
     private ArrayList<String> calculateNorthMoves( ChessGameBoard board ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         for ( int i = 2; i >= -2; i -= 4 ){
             for ( int j = 1; j >= -1; j -= 2 ){
                 if ( isOnScreen( pieceRow + i, pieceColumn + j )
-                        && ( isEnemy( board, pieceRow + i, pieceColumn + j ) ||
+                    && ( isEnemy( board, pieceRow + i, pieceColumn + j ) ||
                         board.getCell(
-                                        pieceRow + i,
-                                        pieceColumn + j )
-                                .getPieceOnSquare() == null ) ){
+                        pieceRow + i,
+                        pieceColumn + j )
+                        .getPieceOnSquare() == null ) ){
                     moves.add( ( pieceRow + i ) + "," + ( pieceColumn + j ) );
                 }
             }
@@ -53,15 +59,15 @@ public class Knight extends ChessGamePiece {
      * @return ArrayList<String> a list of the possible moves
      */
     private ArrayList<String> calculateSouthMoves( ChessGameBoard board ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         for ( int i = 1; i >= -1; i -= 2 ){
             for ( int j = 2; j >= -2; j -= 4 ){
                 if ( isOnScreen( pieceRow + i, pieceColumn + j )
-                        && ( isEnemy( board, pieceRow + i, pieceColumn + j ) ||
+                    && ( isEnemy( board, pieceRow + i, pieceColumn + j ) ||
                         board.getCell(
-                                        pieceRow + i,
-                                        pieceColumn + j )
-                                .getPieceOnSquare() == null ) ){
+                        pieceRow + i,
+                        pieceColumn + j )
+                        .getPieceOnSquare() == null ) ){
                     moves.add( ( pieceRow + i ) + "," + ( pieceColumn + j ) );
                 }
             }
@@ -77,7 +83,7 @@ public class Knight extends ChessGamePiece {
      */
     @Override
     protected ArrayList<String> calculatePossibleMoves( ChessGameBoard board ){
-        ArrayList<String> moves = new ArrayList<String>();
+        ArrayList<String> moves = new ArrayList<>();
         if ( isPieceOnScreen() ){
             moves.addAll( calculateNorthMoves( board ) );
             moves.addAll( calculateSouthMoves( board ) );
@@ -93,20 +99,19 @@ public class Knight extends ChessGamePiece {
     public ImageIcon createImageByPieceType(){
         if ( getColorOfPiece() == ChessGamePiece.WHITE ){
             return new ImageIcon(
-                    getClass().getResource("../../ChessImages/WhiteKnight.gif")
-            );
+                getClass().getResource("chessImages/WhiteKnight.gif")
+            );            
         }
         else if ( getColorOfPiece() == ChessGamePiece.BLACK ){
             return new ImageIcon(
-                    getClass().getResource("../../ChessImages/BlackKnight.gif")
-            );
+                getClass().getResource("chessImages/BlackKnight.gif")
+            );            
         }
         else
         {
             return new ImageIcon(
-                    getClass().getResource("../../ChessImages/default-Unassigned.gif")
-            );
+                getClass().getResource("chessImages/default-Unassigned.gif")
+            );            
         }
     }
 }
-
